@@ -6,7 +6,9 @@ master_pwd = input("Please type your mster password : ")
 def view():
     with open("passwords.txt","r") as f:
         for line in f.readlines():
-            print(line)
+            data =line.rstrip()
+            user,passw = data.split("|")
+            print(f"User : {user} | Password : {passw}")
 
 
 def add():
@@ -14,7 +16,7 @@ def add():
     pwd = input("Password : ")
 
     with open("passwords.txt","a") as f:
-        f.write(f"{name} | {pwd}\n")
+        f.write(f"{name}|{pwd}\n")
 
 
 while True : 
