@@ -1,3 +1,5 @@
+from  cryptography.fernet import fernet 
+
 
 
 master_pwd = input("Please type your mster password : ")
