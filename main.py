@@ -1,6 +1,14 @@
 
 
-pwd = input("Please type your mster password : ")
+master_pwd = input("Please type your mster password : ")
+
+
+def view():
+    pass
+
+def add():
+    name = input("Account Name : ")
+    pwd = input("Password : ")
 
 
 while True : 
@@ -10,9 +18,9 @@ while True :
         break 
 
     if mode == "view":
-        pass
+        view()
     elif mode == "add":
-        pass 
+        add()
     else:
         print("invalid mode")
         continue 
