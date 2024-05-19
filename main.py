@@ -46,7 +46,7 @@ def get_fernet(master_pwd):
 # write_key()
 
 
-master_pwd = input("Please type your mster password : ")
+master_pwd = input("Please type your master password : ")
 fer = get_fernet(master_pwd)
 
 
@@ -68,7 +68,7 @@ def add():
 
 
 while True : 
-    mode = input("Would you like to add a new password or add a new password (view,add), press q to quit? ").lower()
+    mode = input("Would you like to add a new password or view saved password (view,add,q to quit) ? ").lower()
 
     if mode == "q":
         break 
