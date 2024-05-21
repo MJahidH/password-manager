@@ -13,7 +13,7 @@ Password manager that utilises encription
 write_key()
 4. Once running it will ask for the mster password, type in what you want ththe password to be, it is currently set to "hello"
 5. After typing in your desired master password, stop the programme (Ctrl + C)
-6 Comment out these 2 lines of code : 
+6. Comment out these 2 lines of code : 
 write_salt()
 write_key()
 

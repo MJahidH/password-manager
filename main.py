@@ -5,19 +5,25 @@ from cryptography.hazmat.backends import default_backend
 import base64
 import os 
 
+
+#  the key is used to ecrypt/decrypt passwords using Fernet encryption
 def write_key():
     key = Fernet.generate_key()
     with open("key.key","wb")  as key_file:
         key_file.write(key) 
 
-# write_key()
+
 def load_key():
     file =  open("key.key","rb")
     key = file.read()
     file.close()
     return key
 
+
+# the salt is used PBKDF2 derivation process to derive the encyption key to the master password
 def write_salt():
+# bytes string = b"hello""
+# normal string = "hello"
     salt = os.urandom(16)
     with open("salt.salt","wb") as key_file:
         key_file.write(salt)
@@ -64,6 +70,7 @@ def add():
     pwd = input("Password : ")
 
     with open("passwords.txt","a") as f:
+        # encode convertes a string to bytes
         f.write(f"{name}|{fer.encrypt(pwd.encode()).decode()}\n")
 
 
